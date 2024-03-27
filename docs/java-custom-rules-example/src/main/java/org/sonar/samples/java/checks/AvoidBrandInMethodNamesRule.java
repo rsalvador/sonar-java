@@ -32,7 +32,7 @@ public class AvoidBrandInMethodNamesRule extends BaseTreeVisitor implements Java
 
     // For debugging purpose, you can print out the entire AST of the analyzed file
     // In production, this will display all the syntax trees, as soon as the log level is set to DEBUG
-    PrinterVisitor.print(context.getTree(), LOGGER::debug);
+    //PrinterVisitor.print(context.getTree(), LOGGER::debug);
   }
 
   /**

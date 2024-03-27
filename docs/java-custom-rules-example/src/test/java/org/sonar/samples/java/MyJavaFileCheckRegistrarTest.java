@@ -27,7 +27,8 @@ class MyJavaFileCheckRegistrarTest {
       "mycompany-java:AvoidSuperClass",
       "mycompany-java:AvoidTreeList",
       "mycompany-java:AvoidMethodWithSameTypeInArgument",
-      "mycompany-java:SecurityAnnotationMandatory");
+      "mycompany-java:SecurityAnnotationMandatory",
+      "mycompany-java:MyFirstCustomRule");
 
     assertThat(context.mainCheckClasses).extracting(Class::getSimpleName).containsExactly(
       "SpringControllerRequestMappingEntityRule",
@@ -37,7 +38,8 @@ class MyJavaFileCheckRegistrarTest {
       "AvoidSuperClassRule",
       "AvoidTreeListRule",
       "MyCustomSubscriptionRule",
-      "SecurityAnnotationMandatoryRule");
+      "SecurityAnnotationMandatoryRule",
+      "MyFirstCustomCheck");
 
     assertThat(context.testRuleKeys).extracting(RuleKey::toString).containsExactly(
       "mycompany-java:NoIfStatementInTests");
